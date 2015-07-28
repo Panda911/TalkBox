@@ -7,7 +7,7 @@ config = {
 	'description': 'A Raspberry Pi app that enables action assignment to MPR121 pins.',
 	'author': 'Toni Kunic',
 	'url': 'tkunic.me/TalkBox',
-	'download_url': 'https://github.com/Panda911/TalkBox/blob/master',
+	'download_url': 'https://github.com/Panda911/TalkBox/tarball/master',
 	'version': '0.1',
 	'install_requires': ['nose', 'smbus', 'evdev'],
 	'packages': ['raspitap'],
