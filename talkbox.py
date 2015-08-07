@@ -165,6 +165,7 @@ class TalkBoxWeb(web.application):
         func = self.wsgifunc(*middleware)
         return web.httpserver.runsimple(func, ('0.0.0.0', port))
 
+IRQ_PIN = 26
 
 def handle_touch(channel):
     touchData = mpr121.readWordData(0x5a)
@@ -176,8 +177,9 @@ def handle_touch(channel):
 
 if __name__ == "__main__":
     # Init GPIO Interrupt Pin
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+    GPIO.setmode(GPIO.BCM)
+    #Used Bcm instead of board since it worked better and for now 26 is the same for all revisions will fix if that changes
+    GPIO.setup(IRQ_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
     # Init mpr121 touch sensor
     mpr121.TOU_THRESH = 0x30
@@ -190,8 +192,8 @@ if __name__ == "__main__":
 
     # FIXME: shouldn't be global, but short on time
     sound_set = SoundSet()
-    # Add callback to pin 7 (interrupt)
-    GPIO.add_event_detect(7, GPIO.FALLING, callback=handle_touch)
+    # Add callback to pin 26 (interrupt)
+    GPIO.add_event_detect(IRQ_PIN, GPIO.FALLING, callback=handle_touch)
 
     # Init Web (which in turn inits buttons)
     # TODO: add further URLs, for example to test I2C and other statuses.
