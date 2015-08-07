@@ -7,9 +7,9 @@ this is a continuation of the orignal project looking to try to add some sort of
 
 Hardware
 --------
-- [MPR121 Capacitive Touch Sensor Breakout Board]
-(http://www.dx.com/p/mpr121-breakout-i2c-capacitive-touch-sensor-controller-module-for-arduino-raspberry-pi-382663#.VbXi9lVVhFF
-or http://www.adafruit.com/products/2340)
+- [Adafruit Capacitive Touch HAT] (http://www.adafruit.com/products/2340)
+- OR
+- [MPR121 Capacitive Touch Sensor Breakout Board](http://www.dx.com/p/mpr121-breakout-i2c-capacitive-touch-sensor-controller-module-for-arduino-raspberry-pi-382663#.VbXi9lVVhFF) IRQ Pin Must be 26
 - [RaspberryPi](http://www.raspberrypi.org/)
 - some headers and wires
 
