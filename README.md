@@ -9,7 +9,7 @@ Hardware
 --------
 - [Adafruit Capacitive Touch HAT] (http://www.adafruit.com/products/2340)
 - OR
-- [MPR121 Capacitive Touch Sensor Breakout Board](http://www.dx.com/p/mpr121-breakout-i2c-capacitive-touch-sensor-controller-module-for-arduino-raspberry-pi-382663#.VbXi9lVVhFF) IRQ Pin Must be 26
+- [MPR121 Capacitive Touch Sensor Breakout Board](http://www.dx.com/p/mpr121-breakout-i2c-capacitive-touch-sensor-controller-module-for-arduino-raspberry-pi-382663#.VbXi9lVVhFF) IRQ Pin Must be pin 26 to compley with adafruits board so the code works on either board
 - [RaspberryPi](http://www.raspberrypi.org/)
 - some headers and wires
 
